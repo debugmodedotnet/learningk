@@ -1,0 +1,31 @@
+<button routerLink="/add-event" class="btn btn-info btn-lg">Add Event </button>
+<hr/>
+<div class="row">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Tech</th>
+                    <th>Date</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let event of events">
+                    <td>{{ event.Id }}</td>
+                    <td>{{ event.Title }}</td>
+                    <td>{{ event.Description }}</td>
+                    <td>{{event.Tech}}</td>
+                    <td>{{event.Date}}</td>
+                    <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                    <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+

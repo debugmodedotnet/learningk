@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-2">
+      <button class="btn btn-primary" routerLink="/events">All Events</button>
+    </div>
+    <div class="col-md-8">
+        <h2 class="text-center text-info">Add Event</h2>
+        <br/>
+        <hr/>
+      
+        <form class="form form-group" [formGroup]="addEventForm" (ngSubmit)="addEvent()">
+          <input class="form-control" formControlName="Id" placeholder="ID">
+          <input class="form-control" formControlName="Title" placeholder="Event name">
+          <input class="form-control" formControlName="Description" placeholder="Description">
+          <input class="form-control" formControlName="Tech" placeholder="Tech">
+          <input class="form-control" formControlName="Date" placeholder="Date">
+          <br/>
+          <button type="submit" [disabled]="addEventForm.invalid"  class="btn btn-primary">Add Event</button>
+        </form>
+    </div>
+    <div class="col-md-2">
+        <span *ngIf="isEventAdded">Event Added Successfully</span>
+    </div>
+   
+  </div>
+
