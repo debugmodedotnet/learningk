@@ -2,6 +2,8 @@ import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { LogService } from './log.service';
 import { ProductComponent } from './product/product.component';
+import { ProducerComponent } from './producer/producer.component';
+import { ConsumerComponent } from './consumer/consumer.component';
 
 
 @Component({
@@ -10,8 +12,9 @@ import { ProductComponent } from './product/product.component';
   imports: [
     RouterOutlet, 
     RouterLink,
-    ProductComponent
-
+    ProductComponent,
+    ProducerComponent,
+    ConsumerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

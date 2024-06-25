@@ -35,6 +35,7 @@ export class AddEventComponent {
       this.eventService.addEvent(this.addEventForm.value);
       this.isEventAdded = true;
       this.addEventForm.reset();
+
     }
   }
 
