@@ -1,0 +1,25 @@
+
+<div class="row">
+    <h2>Invoices</h2>
+    <hr/>
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice Number</th>
+                <th>Invoice Date</th>
+                <th>Customer Name</th>
+                <th>Amount</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let invoice of invoices">
+                <td>{{invoice.InvoiceNumber}}</td>
+                <td>{{invoice.InvoiceDate}}</td>
+                <td>{{invoice.InvoiceName}}</td>
+                <td>{{invoice.InvoiceAmount}}</td>
+                <td><button class="btn btn-danger" (click)="editInvoice(invoice)">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

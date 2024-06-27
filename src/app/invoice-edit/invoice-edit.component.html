@@ -1,0 +1,25 @@
+
+<div class="row">
+    <h2>Edit Invoice {{invoiceNo}}</h2>
+
+    <hr/>
+    <form class="container mt-5" [formGroup]="invoiceForm" (ngSubmit)="saveInvoice()">
+        <div class="mb-3">
+          <label for="InvoiceNumber" class="form-label">Invoice Number:</label>
+          <input class="form-control" formControlName="InvoiceNumber" type="text">
+        </div>
+        <div class="mb-3">
+          <label for="InvoiceName" class="form-label">Invoice Name:</label>
+          <input class="form-control" formControlName="InvoiceName" type="text">
+        </div>
+        <div class="mb-3">
+          <label for="InvoiceDate" class="form-label">Invoice Date :</label>
+          <input class="form-control" formControlName="InvoiceDate" type="text">
+        </div>
+        <div class="mb-3">
+          <label for="InvoiceAmount" class="form-label">Invoice Amount:</label>
+          <input class="form-control" formControlName="InvoiceAmount"/>
+        </div>
+        <button class="btn btn-info" type="submit">Save</button>
+      </form>
+</div>
